@@ -15,6 +15,8 @@ This python template includes:
 - Possibility to have a readthedocs page
 - CI workflow to publish the package on PyPI
 
+Please adapt the branch protection rules after creating a repository from this template!
+
 ## Testing
 ### In github CI
 Adapt .github/workflows/testing.yml with Python version, other packages,...
@@ -40,6 +42,6 @@ generating a new release on GitHub
 - The main branch is protected and holds the most recent released version
 - The develop branches hold the latest developments for the next version. Naming convention: develop_vMAJOR.MINOR.BUGFIX
 - A feature branch is created and merged on the most recent develop branch via a PR
-- Any PR on the develop branch is tested and can only be merged after tests have passed
+- Any PR on a develop branch is tested and can only be merged after tests have passed
 - Merging a develop branch into main tests again
 - Releases to PyPI are triggered by making a new release
