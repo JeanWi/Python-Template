@@ -10,14 +10,36 @@
 
 
 # Python-Template
+This python template includes:
+- Testing including code coverage with github CI
+- Possibility to have a readthedocs page
+- CI workflow to publish the package on PyPI
 
 ## Testing
 ### In github CI
-Adapt file in .github/workflows/testing.yml with Python version, other packages,...
+Adapt .github/workflows/testing.yml with Python version, other packages,...
 
 ### Codecov
+Get a codecov account and connect the repository. You need to add a codecov token to the repository
 
-## Readthedocs
+## Readthedocs/Sphinx
+- Make sure sphinx is installed in your virtual environment
+- Navigate to the docs directory in the terminal
+- Run sphinx-quickstart from the terminal and enter all required details
+- Get a readthedocs account and connect the repository to readthedocs
 
 ## Status Badges in readme file
 To show the status badges, comment in the first lines in this file and change the URLs respectively.
+
+## Publishing on PyPI
+The repository needs to be connected to a PyPI account and a token needs to be added to the repository. Refer to other
+recources on how this works. Test the release first with TestPyPI. The workflow to publish on PyPI is triggered by
+generating a new release on GitHub
+
+## Workflow
+- The main branch is protected and holds the most recent released version
+- The develop branches hold the latest developments for the next version. Naming convention: develop_vMAJOR.MINOR.BUGFIX
+- A feature branch is created and merged on the most recent develop branch via a PR
+- Any PR on the develop branch is tested and can only be merged after tests have passed
+- Merging a develop branch into main tests again
+- Releases to PyPI are triggered by making a new release
