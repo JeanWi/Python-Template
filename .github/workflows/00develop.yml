@@ -7,7 +7,6 @@ on:
 
 jobs:
   autoformatting:
-    needs: pin_requirements
     uses: ./.github/workflows/autoformatting.yml
   testing:
     needs: autoformatting
