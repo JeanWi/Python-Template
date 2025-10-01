@@ -15,7 +15,8 @@ This python template includes:
 - Possibility to have a readthedocs page
 - CI workflow to publish the package on PyPI
 
-Please adapt the branch protection rules after creating a repository from this template!
+Please adapt the branch protection rules after creating a repository from this template. It's easiest to 
+export the rules from this repository and import them again to the new repository.
 
 ## Testing
 ### In github CI
