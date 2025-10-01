@@ -6,9 +6,6 @@ on:
       - 'develop*'
 
 jobs:
-  pin_requirements:
-    uses: ./.github/workflows/pin_requirements.yml
-    secrets: inherit
   autoformatting:
     needs: pin_requirements
     uses: ./.github/workflows/autoformatting.yml
