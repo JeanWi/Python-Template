@@ -21,4 +21,3 @@ Adapt file in .github/workflows/testing.yml with Python version, other packages,
 
 ## Status Badges in readme file
 To show the status badges, comment in the first lines in this file and change the URLs respectively.
-
